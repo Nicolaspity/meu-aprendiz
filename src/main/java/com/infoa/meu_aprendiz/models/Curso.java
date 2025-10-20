@@ -1,15 +1,11 @@
-package com.senai.infoa.meu_aprendiz.models;
+package com.infoa.meu_aprendiz.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
-import java.util.Set;
 
 // Curso.java 
 // O model mais importante
@@ -45,6 +41,84 @@ public class Curso {
     private int idEndereco;
 
     public Curso() {}
+
+    public Curso(int idCurso, String nome, float duracaoHoras, float avaliacao, String descricao, double preco,
+            String nivel, int idEndereco) {
+        this.idCurso = idCurso;
+        this.nome = nome;
+        this.duracaoHoras = duracaoHoras;
+        this.avaliacao = avaliacao;
+        this.descricao = descricao;
+        this.preco = preco;
+        this.nivel = nivel;
+        this.idEndereco = idEndereco;
+    }
+
+    public int getIdCurso() {
+        return idCurso;
+    }
+
+    public void setIdCurso(int idCurso) {
+        this.idCurso = idCurso;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public float getDuracaoHoras() {
+        return duracaoHoras;
+    }
+
+    public void setDuracaoHoras(float duracaoHoras) {
+        this.duracaoHoras = duracaoHoras;
+    }
+
+    public float getAvaliacao() {
+        return avaliacao;
+    }
+
+    public void setAvaliacao(float avaliacao) {
+        this.avaliacao = avaliacao;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public String getNivel() {
+        return nivel;
+    }
+
+    public void setNivel(String nivel) {
+        this.nivel = nivel;
+    }
+
+    public int getIdEndereco() {
+        return idEndereco;
+    }
+
+    public void setIdEndereco(int idEndereco) {
+        this.idEndereco = idEndereco;
+    }
+
+    
 
     
 }

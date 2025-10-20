@@ -1,15 +1,11 @@
-package com.senai.infoa.meu_aprendiz.models;
+package com.infoa.meu_aprendiz.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
-import java.util.Set;
 
 @Entity
 @Table(name="usuario")
@@ -45,7 +41,97 @@ public class Usuario {
     @Column(name="experiencias")
     private String experiencias;
 
-    public usuario(){}
+    public Usuario() {
+    }
+
+    public Usuario(int idUsuario, int idEndereco, String nome, String email, String cpf, String telefone,
+            String escolaridade, String interesses, String experiencias) {
+        this.idUsuario = idUsuario;
+        this.idEndereco = idEndereco;
+        this.nome = nome;
+        this.email = email;
+        this.cpf = cpf;
+        this.telefone = telefone;
+        this.escolaridade = escolaridade;
+        this.interesses = interesses;
+        this.experiencias = experiencias;
+    }
+
+    public int getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
+    public int getIdEndereco() {
+        return idEndereco;
+    }
+
+    public void setIdEndereco(int idEndereco) {
+        this.idEndereco = idEndereco;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getEscolaridade() {
+        return escolaridade;
+    }
+
+    public void setEscolaridade(String escolaridade) {
+        this.escolaridade = escolaridade;
+    }
+
+    public String getInteresses() {
+        return interesses;
+    }
+
+    public void setInteresses(String interesses) {
+        this.interesses = interesses;
+    }
+
+    public String getExperiencias() {
+        return experiencias;
+    }
+
+    public void setExperiencias(String experiencias) {
+        this.experiencias = experiencias;
+    }
+
+    
+
+
 
 
 

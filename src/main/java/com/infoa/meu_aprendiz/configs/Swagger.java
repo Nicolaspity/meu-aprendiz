@@ -1,4 +1,4 @@
-package com.infoa.meu_aprendiz;
+package com.infoa.meu_aprendiz.configs;
 
 import org.springframework.context.annotation.Configuration;
 

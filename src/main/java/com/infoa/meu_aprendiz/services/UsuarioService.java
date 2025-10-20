@@ -1,4 +1,6 @@
-package com.senai.infoa.meu_aprendiz.services;
+package com.infoa.meu_aprendiz.services;
+
+import org.springframework.stereotype.Service;
 
 @Service
 public class UsuarioService {

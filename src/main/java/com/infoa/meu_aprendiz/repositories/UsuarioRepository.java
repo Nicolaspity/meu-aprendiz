@@ -1,4 +1,4 @@
-package com.senai.infoa.meu_aprendiz.repository;
+package com.infoa.meu_aprendiz.repositories;
 
 class Conta {
     

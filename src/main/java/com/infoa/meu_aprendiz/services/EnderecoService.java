@@ -1,4 +1,4 @@
-package com.senai.infoa.meu_aprendiz.services;
+package com.infoa.meu_aprendiz.services;
 
 class Endereco {
     

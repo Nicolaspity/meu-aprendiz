@@ -1,21 +1,31 @@
-package com.senai.infoa.meu_aprendiz.controllers;
+package com.infoa.meu_aprendiz.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.infoa.meu_aprendiz.models.Usuario;
+import com.infoa.meu_aprendiz.services.UsuarioService;
+
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
 @RestController
-@RequestMapping
-public class UserController {
+public class UsuarioController {
     @Autowired
-    private final UserService userService;
+    private final UsuarioService usuarioService;
 
-    public UserController(UserService userService) {
-        this.userService = userService;
+    public UsuarioController(UsuarioService usuarioService) {
+        this.usuarioService = usuarioService;
     }
 
     @PostMapping("/cadastro")
-    public String cadastrar(@RequestBody UserDto userDto) {
-        return userService.cadastrar(userDto);
+    public String cadastrar(@RequestBody UserioDto userDto) {
+        return usuarioService.cadastrar(userDto);
     }
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody UserLogin user) {
+    public ResponseEntity<?> login(@RequestBody UsuarioLogin user) {
         boolean success = loginService.validateUser(user);
 
         if (success) {

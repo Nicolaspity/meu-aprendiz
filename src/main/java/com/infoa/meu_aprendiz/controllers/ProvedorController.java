@@ -1,5 +1,5 @@
 package com.infoa.meu_aprendiz.controllers;
 
-public class VagaController {
+public class ProvedorController {
     
 }
