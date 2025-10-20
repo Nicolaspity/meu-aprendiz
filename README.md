@@ -9,7 +9,7 @@
 -	Não terá “jornada” na tabela “vagas”
 -	O nome do usuário aparecerá no canto superior direito em todas as páginas
 
-https://prod.liveshare.vsengsaas.visualstudio.com/join?AB1265AC1C36C4023E2ADBB5A53DA57513C9
+https://prod.liveshare.vsengsaas.visualstudio.com/join?C77524EF76A164338DEDCD269E42C076B56B
 
 
 Segue o link do web Service:
