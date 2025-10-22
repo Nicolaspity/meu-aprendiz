@@ -1,5 +1,8 @@
-package com.senai.infoa.meu_aprendiz.services;
+package com.infoa.meu_aprendiz.services;
 
-class Vaga {
+import org.springframework.stereotype.Service;
+
+@Service
+public class VagaService {
     
 }

@@ -128,11 +128,4 @@ public class Usuario {
     public void setExperiencias(String experiencias) {
         this.experiencias = experiencias;
     }
-
-    
-
-
-
-
-
 }

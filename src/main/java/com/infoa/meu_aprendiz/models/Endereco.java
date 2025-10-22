@@ -14,7 +14,7 @@ public class Endereco {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="idEndereco")
+    @Column(name="endereco_id")
     private int idEndereco;
 
     @Column(name="nome")
@@ -81,9 +81,5 @@ public class Endereco {
 
     public void setUf(String uf) {
         this.uf = uf;
-    }
-
-    
-
-    
+    }    
 }

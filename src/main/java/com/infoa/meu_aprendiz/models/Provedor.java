@@ -13,7 +13,7 @@ public class Provedor {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="idProvedor")
+    @Column(name="provedor_id")
     private int idProvedor;
 
     @Column(name="nome")
@@ -53,11 +53,5 @@ public class Provedor {
 
     public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
-    }
-
-    
-
-    
-
-    
+    }  
 }

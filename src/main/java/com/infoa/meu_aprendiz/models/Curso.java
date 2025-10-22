@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 // Curso.java 
@@ -15,13 +17,13 @@ public class Curso {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="idCurso")
+    @Column(name="curso_id")
     private int idCurso;
 
     @Column(name="nome")
     private String nome;
 
-    @Column(name="duracaoHoras")
+    @Column(name="duracao_horas")
     private float duracaoHoras;
 
     @Column(name="avaliacao")
@@ -37,13 +39,14 @@ public class Curso {
     private String nivel;
 
     //Foreign key
-    @Column(name="endereco_id")
-    private int idEndereco;
+    @OneToMany
+    @JoinColumn(name="endereco_id")
+    private Endereco endereco;
 
     public Curso() {}
 
     public Curso(int idCurso, String nome, float duracaoHoras, float avaliacao, String descricao, double preco,
-            String nivel, int idEndereco) {
+            String nivel, Endereco endereco) {
         this.idCurso = idCurso;
         this.nome = nome;
         this.duracaoHoras = duracaoHoras;
@@ -51,7 +54,7 @@ public class Curso {
         this.descricao = descricao;
         this.preco = preco;
         this.nivel = nivel;
-        this.idEndereco = idEndereco;
+        this.endereco = endereco;
     }
 
     public int getIdCurso() {
@@ -110,15 +113,11 @@ public class Curso {
         this.nivel = nivel;
     }
 
-    public int getIdEndereco() {
-        return idEndereco;
+    public Endereco getIdEndereco() {
+        return endereco;
     }
 
-    public void setIdEndereco(int idEndereco) {
-        this.idEndereco = idEndereco;
-    }
-
-    
-
-    
+    public void setIdEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }    
 }

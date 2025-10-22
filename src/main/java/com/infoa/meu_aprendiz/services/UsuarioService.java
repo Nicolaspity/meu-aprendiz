@@ -1,20 +1,25 @@
 package com.infoa.meu_aprendiz.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.infoa.meu_aprendiz.models.Usuario;
+import com.infoa.meu_aprendiz.repositories.UsuarioRepository;
 
 @Service
 public class UsuarioService {
 
-    public String cadastrar(UserDto user) {
-        if (!user.getSenha().equals(user.getConfirmarSenha())) {
-            return "As senhas não coincidem.";
-        }
+    @Autowired
+    UsuarioRepository usuarioRepository;
 
-        return "Cadastro realizado com sucesso para " + user.getNome();
+
+    public boolean login(String email, String cpf) {
+        Usuario usuario = usuarioRepository.findByEmailAndCpf(email, cpf);
+        return usuario != null;
     }
 
-    public boolean validateUser(UserLogin user) {
-        return "admin".equals(user.getUsername()) && "1234".equals(user.getPassword());
+    public Usuario cadastrarUsuario(Usuario usuario){
+        return usuarioRepository.save(usuario);
     }
 }
 

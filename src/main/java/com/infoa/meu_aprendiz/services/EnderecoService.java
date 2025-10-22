@@ -1,5 +1,8 @@
 package com.infoa.meu_aprendiz.services;
 
-class Endereco {
+import org.springframework.stereotype.Service;
+
+@Service
+class EnderecoService {
     
 }
