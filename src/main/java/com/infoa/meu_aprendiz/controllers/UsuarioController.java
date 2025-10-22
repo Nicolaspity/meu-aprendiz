@@ -21,7 +21,7 @@ public class UsuarioController {
 
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody Usuario usuario) {
-        boolean sucesso = usuarioService.login(usuario.getEmail(), usuario.getCpf())
+        boolean sucesso = usuarioService.login(usuario.getEmail(), usuario.getCpf());
         if (sucesso) {
             return ResponseEntity.ok("Usuário logado com sucesso!");
         }else {
