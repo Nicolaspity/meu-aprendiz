@@ -37,7 +37,7 @@ public class Vaga {
     private Provedor provedor;
 
     //Foreign key
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name="endereco_id")
     private Endereco endereco;
 
