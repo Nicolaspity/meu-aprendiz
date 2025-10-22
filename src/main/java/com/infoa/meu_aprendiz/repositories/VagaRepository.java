@@ -11,5 +11,3 @@ public interface VagaRepository extends JpaRepository<Vaga, Integer>{
 
 
 
-//Boa mn continue nos vamos conseguir. Vamos Nessa!
-//Valeu
